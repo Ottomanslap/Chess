@@ -1,13 +1,14 @@
 package chess;
 
 import java.io.*;
+import java.util.Scanner;
 
 class Main {
 	
 	public static boolean winCondition;
 	//So that we know when to stop playing
 	
-	static Reader input = new InputStreamReader(System.in);
+	private static Scanner input = new Scanner( System.in );
 	//To receive inputs from user
 	
 	public static Square[][] table = new Square[8][8];
@@ -18,10 +19,30 @@ class Main {
 	
 	public static void main(String[] args) throws IOException {
 		
+		System.out.print("Can your setup handle symbols? (y/n/idk):");
 		
+		String answer = readInput().toLowerCase();
+		
+		while (!answer.equals("y")  && !answer.equals("n")){
+			
+			System.out.print("Can you see two different characters here? ♙♟ (y/n):");
+			answer = readInput().toLowerCase();
+			
+		}
+		
+		String SLDefault = null;
+		
+		if (answer.equals("y")){
+			SLDefault = "S";
+		}
+		else if (answer.equals("n")){
+			SLDefault = "L";
+		}
 		
 		init("0");
-		printTable("s");
+		
+		
+		printTable(SLDefault);
 		//winCondition = false;
 		
 		//while (!winCondition){//This is where the game will take place
@@ -75,7 +96,7 @@ class Main {
 	}
 	final static void printTable(String SL){
 		if (SL != "S" && SL != "L")
-				throw new Error("ERROR: printTable recieved incorrect input for Symbol/Letter!");
+				throw new Error("ERROR: printTable recieved incorrect input for Symbol/Letter:" + SL );
 		for (int r = table.length - 1 ; r >= 0 ; r--){
 			for (int c = 0 ; c < table.length ; c++){
 				System.out.print(table[r][c].toString(SL));
@@ -91,8 +112,9 @@ class Main {
 		return reader;
 		
 	}
-//	final static String readInput(){
-//		CharBuffer data = CharBuffer.allocate();
-//		input.read(data);
-//	}
+	
+	
+	final static String readInput(){
+		return input.nextLine();
+	}
 }

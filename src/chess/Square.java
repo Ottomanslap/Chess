@@ -11,7 +11,7 @@ class Square {
 			case "L":
 				return("["+piece.toStringL()+"]");
 			default :
-				throw new Error("ERROR: Square recieved incorrect input for Symbol/Letter!");
+				throw new Error("ERROR: Square recieved incorrect input for Symbol/Letter:" + SL);
 			}
 		}else{
 			if (isBlack){
