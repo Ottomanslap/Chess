@@ -18,6 +18,8 @@ class Main {
 	
 	public static void main(String[] args) throws IOException {
 		
+		
+		
 		init();
 		printTable();
 		//winCondition = false;
@@ -74,7 +76,7 @@ class Main {
 	final static void printTable(){
 		for (int r = table.length - 1 ; r >= 0 ; r--){
 			for (int c = 0 ; c < table.length ; c++){
-				System.out.print(table[r][c].toString());
+				System.out.print(table[r][c].toString("S"));
 			}
 			System.out.println();
 		}

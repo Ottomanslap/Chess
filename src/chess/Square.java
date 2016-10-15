@@ -3,9 +3,16 @@ package chess;
 class Square {
 	boolean isBlack;
 	Piece piece;
-	public String toString() {
+	public String toString(String SL) {
 		if (piece != null){
-			return("["+piece.toString()+"]");
+			switch (SL){
+			case "S":
+				return("["+piece.toStringS()+"]");
+			case "L":
+				return("["+piece.toStringL()+"]");
+			default :
+				throw new Error("ERROR: Square doesn't know which type of piece descriptor to return.");
+			}
 		}else{
 			if (isBlack){
 				return ("[■]");
