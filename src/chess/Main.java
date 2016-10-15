@@ -20,8 +20,8 @@ class Main {
 		
 		
 		
-		init();
-		printTable();
+		init("0");
+		printTable("s");
 		//winCondition = false;
 		
 		//while (!winCondition){//This is where the game will take place
@@ -29,7 +29,7 @@ class Main {
 		//}
 		
 	}
-	final static void init() throws IOException{
+	final static void init(String board) throws IOException{
 		/*
 		 * Sets up the predetermined piece positions
 		 * Sets up the chess board
@@ -38,7 +38,7 @@ class Main {
 		 * 
 		 */
 		
-		FileReader layout = loadMap("0");
+		FileReader layout = loadMap(board);
 		
 		for (int r = 0 ; r < table.length ; r++){
 			for (int c = 0 ; c < table[r].length ; c++){
@@ -73,10 +73,12 @@ class Main {
 		System.out.println("Initial positions loaded.");
 		layout.close();
 	}
-	final static void printTable(){
+	final static void printTable(String SL){
+		if (SL != "S" && SL != "L")
+				throw new Error("ERROR: printTable recieved incorrect input for Symbol/Letter!");
 		for (int r = table.length - 1 ; r >= 0 ; r--){
 			for (int c = 0 ; c < table.length ; c++){
-				System.out.print(table[r][c].toString("S"));
+				System.out.print(table[r][c].toString(SL));
 			}
 			System.out.println();
 		}

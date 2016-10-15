@@ -11,7 +11,7 @@ class Square {
 			case "L":
 				return("["+piece.toStringL()+"]");
 			default :
-				throw new Error("ERROR: Square doesn't know which type of piece descriptor to return.");
+				throw new Error("ERROR: Square recieved incorrect input for Symbol/Letter!");
 			}
 		}else{
 			if (isBlack){
