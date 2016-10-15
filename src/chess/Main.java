@@ -81,7 +81,7 @@ class Main {
 	}
 	final static FileReader loadMap(String file) throws IOException{
 		
-		file = System.getProperty("java.class.path") + "//..//src//Layouts//" + file;
+		file = System.getProperty("java.class.path") + "//..//layouts//" + file;
 		File toBeLoaded = new File(file);
 		FileReader reader = new FileReader(toBeLoaded);
 		return reader;
