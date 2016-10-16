@@ -18,3 +18,5 @@ Initial positions loaded.
 (GitHub's text makes the spaces disappear, its actually aligned)
 
 This is what the program can do now and also the extent of it's abilities apart from displaying in letters.
+
+!(/page\ stuff/GitHub\ Preview.jpeg)
