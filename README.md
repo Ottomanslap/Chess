@@ -5,4 +5,4 @@ Currently only works for terminals but I plan to create a gui, simply because it
 
 ![Preview](/page\ stuff/GitHub\ Preview.jpeg)
 
-This is what the program can do now and also the extent of it's abilities apart from displaying in letters.
+This is what the program can do now and also the extent of it's abilities.
