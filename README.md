@@ -19,4 +19,4 @@ Initial positions loaded.
 
 This is what the program can do now and also the extent of it's abilities apart from displaying in letters.
 
-!(/page\ stuff/GitHub\ Preview.jpeg)
+![Preview](/page\ stuff/GitHub\ Preview.jpeg)
