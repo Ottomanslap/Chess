@@ -55,7 +55,7 @@ class Main {
 		System.out.println("Load Game - L" + "	NOT IMPLEMENTED YET!");
 		System.out.println("Puzzles   - P" + "	NOT IMPLEMENTED YET!");
 		System.out.println("Quit      - Q");
-		System.out.println("Enter choice: ");
+		System.out.print("Enter choice: ");
 
 		String choice = readInput().toUpperCase();
 		
@@ -70,14 +70,26 @@ class Main {
 				break;
 			case "L":
 				//TODO: Loading
-				System.out.println("Loading is not done yet! Come back later.");
+				System.out.println("Loading is not done yet! Come back later.\n");
+				System.out.print("Enter choice: ");
+				choice = readInput().toUpperCase();
+				System.out.println();
 				break;
 			case "P":
 				//TODO: Make some puzzles to be able to load them.
 				System.out.println("Puzzles are not done yet! Come back later.");
+				System.out.print("Enter choice: ");
+				choice = readInput().toUpperCase();
+				System.out.println();
 				break;
 			case "Q":
 				return;
+				
+			default:
+				System.out.print("Could not understand, try again: ");
+				choice = readInput().toUpperCase();
+				System.out.println();
+				break;
 			}
 
 		}
