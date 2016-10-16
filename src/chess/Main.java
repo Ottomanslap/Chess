@@ -26,6 +26,9 @@ class Main {
 		System.out.print("Can your setup handle symbols? (y/n/idk):");
 
 		String answer = readInput().toLowerCase();
+		
+		//Print empty line.
+		System.out.println();
 
 		while (!answer.equals("y")  && !answer.equals("n")){
 
@@ -33,6 +36,9 @@ class Main {
 			answer = readInput().toLowerCase();
 
 		}
+		
+		//Print empty line.
+		System.out.println();
 
 		String SLDefault = null;
 
@@ -52,7 +58,9 @@ class Main {
 		System.out.println("Enter choice: ");
 
 		String choice = readInput().toUpperCase();
-
+		
+		//Print empty line.
+		System.out.println();
 
 		while (mode == null){
 			switch (choice){
@@ -125,7 +133,7 @@ class Main {
 
 			}
 		}
-		System.out.println("Initial positions loaded.");
+		System.out.println("Initial positions loaded.\n");
 		layout.close();
 	}
 	final static void printTable(String SL){
